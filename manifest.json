@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Outreach Company Helper (Hybrid)",
+  "version": "1.0",
+  "description": "Suggests company names using Outreach company field or domain fallback.",
+  "permissions": ["clipboardWrite", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.outreach.io/*"],
+      "js": ["overlay.js"],
+      "css": ["overlay.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
