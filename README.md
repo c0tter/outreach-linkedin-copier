@@ -1,32 +1,39 @@
-🔍 What This Extension Does
-This Chrome extension enhances Outreach by automatically extracting key contact details from a profile page. It helps when Outreach’s built-in LinkedIn matcher fails to correctly identify or match LinkedIn profiles.
 
-✨ Why It Exists
-Outreach doesn’t always surface accurate LinkedIn matches. This extension fills that gap by pulling reliable information from the visible page content, so users can quickly access and copy:
+➡️ Includes a **Copy** button to easily transfer the line into LinkedIn or other workflows.
 
-Name (from the contact header)
+---
 
-Company name (parsed from the contact's email domain)
+## ⚙️ How It Works
 
-LinkedIn (as a static label to aid manual lookup)
+- Waits for the email address to appear in the DOM
+- Extracts the domain from the email (e.g., `@example.com` → `Example`)
+- Combines it with the visible name and appends `"LinkedIn"`
+- Displays a compact overlay with the full string and a one-click copy button
 
-💡 What It Outputs
-On any Outreach contact page, it displays a floating popup like this:
+---
 
-css
-Copy
-Edit
-[Name], [Company], LinkedIn
-Along with a Copy button to easily transfer the line into LinkedIn or other tools.
+## 🛠️ Credit
 
-⚙️ How It Works
-Waits for the email address to appear
+This extension was created to streamline Outreach workflows and improve contact identification when automated matchers fall short.
 
-Extracts the domain from the email (e.g., @example.com → Example)
+---
 
-Combines it with the visible name and adds "LinkedIn"
+## 📦 Installation (Developer Mode)
 
-Shows the result in a small overlay with a one-click copy button
+1. Clone or download this repo.
+2. Go to `chrome://extensions` in Chrome.
+3. Enable **Developer mode**.
+4. Click **Load unpacked** and select the extension folder.
 
-🛠️ Credit
-This lightweight extension was created to streamline Outreach workflows and improve contact identification when automated matchers fall short.
+---
+
+## 🧪 Compatibility
+
+- Designed for use on `https://*.outreach.io/*` pages.
+- Works with dynamic content — includes logic to wait for email field to appear before extracting data.
+
+---
+
+## 📄 License
+
+MIT
